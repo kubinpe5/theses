@@ -27,6 +27,19 @@
     <%= f.label :faculty %><br>
     <%= f.select :faculty_id, Faculty.all.collect { |f| [f.name, f.id] }, include_blank: true %>
   </div>
+
+  <div class="field">
+    <%= f.label :username %><br>
+    <%= text_field(:person, :username) %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= text_field(:person, :name) %>
+  </div>
+  <div class="field">
+    <%= f.label :surname %><br>
+    <%= text_field(:person, :surname) %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
